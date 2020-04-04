@@ -1,0 +1,7 @@
+{
+  "name": "eatbyfront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
