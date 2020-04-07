@@ -1,3 +1,23 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+ion-content{
+  --ion-background-color: #C2D4AC;
+}
+
+
+ion-card{
+  height: auto;
+  padding: 20px 0px 20px 0px;
+  margin: 50px auto;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+ion-item{
+  padding: 10px;
+  
+}
+
+

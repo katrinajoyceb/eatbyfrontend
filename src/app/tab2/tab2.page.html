@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
+    <ion-title size="large">
+      EatBy
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,111 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="small">Add Food Item</ion-title>
+    
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  
+
+<!-- <ion-grid *ngIf="menu">
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <ion-card>
+        <ion-title>How would you <br />like to add your <br />food item?</ion-title>
+        
+       
+
+        <ion-item>
+          <ion-button color="primary" shape="round" (click)="scanBarcode()">Scan Barcode</ion-button>
+        </ion-item>
+
+        <ion-item>
+          <ion-button color="secondary" shape="round" (click)="onChange(2)">Manual Input</ion-button>
+        </ion-item>
+
+        <ion-item>
+          <ion-button color="tertiary" shape="round" routerLink="/tabs/tab1">Cancel</ion-button>
+        </ion-item>
+
+    
+        
+        
+        
+       
+      </ion-card>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+  
+</ion-grid> -->
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <ion-card>
+        <ion-title>Add Item</ion-title>
+
+        <form [formGroup]="addItemForm" (ngSubmit)="addToPantry()">
+        <ion-item>
+          <ion-label>Name: </ion-label>
+          <ion-input type="text" formControlName="name" placeholder="ex. 2% Milk"></ion-input>
+        </ion-item>
+
+      
+        
+        <ion-item>
+          <ion-label>Type: </ion-label>
+          <ion-select formControlName="type" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+            <ion-select-option value="Dairy">Dairy</ion-select-option>
+            <ion-select-option value="Meat">Meat</ion-select-option>
+            <ion-select-option value="Poultry">Poultry</ion-select-option>
+            <ion-select-option value="Seafood">Seafood</ion-select-option>
+            <ion-select-option value="Eggs">Eggs</ion-select-option>
+            <ion-select-option value="Bakery">Bakery</ion-select-option>
+            <ion-select-option value="Vegetable">Vegetable</ion-select-option>
+            <ion-select-option value="Fruit">Fruit</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+      
+
+        <ion-item>
+          <ion-label>Expiration Date</ion-label>
+          <ion-datetime displayFormat="MM DD YY" formControlName="expirationDate" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Price: $</ion-label>
+          <ion-input type="number" formControlName="price" placeholder="ex. 2.50"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-button color="primary" shape="round" type="submit"  [disabled]="!addItemForm.valid">Add To Pantry</ion-button>
+        </ion-item>
+
+      </form>
+
+
+
+
+        <ion-item>
+          <ion-button color="tertiary" shape="round" routerLink="/tabs/tab1">Go Back</ion-button>
+        </ion-item>
+
+        
+        
+        
+        
+       
+      </ion-card>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+</ion-grid> 
+
+ 
 </ion-content>

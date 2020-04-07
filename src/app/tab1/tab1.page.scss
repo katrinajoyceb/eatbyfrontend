@@ -1,3 +1,81 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+ion-card{
+  height: 450px;
+  padding-top: 20px;
+  
+}
+
+
+
+ion-content{
+  --ion-background-color: rgb(255, 255, 255);
+}
+
+p{
+  font-size: 11px;
+}
+
+ion-list ion-item{
+  border: 1px solid #E6E6E6;
+  padding: 20px;
+  border-radius: 0 50px 50px 0px;
+  margin: 5px auto;
+}
+
+
+.list{
+  height: auto;
+  padding-top: 20px;
+  // overflow-y: scroll;
+
+}
+
+
+.expired{
+  width: 10px;
+  height: 10px;
+ margin-right: 5px;
+ margin-left: 5px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.good{
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+ margin-left: 5px;
+  background-color: #598C1A;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.almost{
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+ margin-left: 5px;
+  background-color: #582B01;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.frozen{
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+ margin-left: 5px;
+  background-color: #8B8A6E;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+ion-fab-list ion-fab-button{
+  width: 100px;
+  border-radius: 0px !important;
+}

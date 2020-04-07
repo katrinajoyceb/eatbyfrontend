@@ -1,0 +1,50 @@
+[
+    {
+        "code": "891071001177",
+        "group": "single",
+        "items": [
+            {
+                "name": "French Brioche",
+                "type": "Bread",
+                "expirationDate": "04/20/2020",
+                "price": "6.75"
+            }
+        ]
+        
+    },
+
+    {
+        "code": "1234567890",
+        "group": "list",
+        "items": [
+            {
+                "name": "Large Eggs",
+                "type": "Eggs",
+                "expirationDate": "04/18/2020",
+                "price": "3.99"
+            },
+
+            {
+                "name": "Bananas",
+                "type": "Fruit",
+                "expirationDate": "04/12/2020",
+                "price": "1.75"
+            },
+
+            {
+                "name": "Kale",
+                "type": "Vegetable",
+                "expirationDate": "04/12/2020",
+                "price": "5.59"
+            },
+
+            {
+                "name": "Oranges",
+                "type": "Fruit",
+                "expirationDate": "04/25/2020",
+                "price": "4.00"
+            }
+        ]
+        
+    }
+]

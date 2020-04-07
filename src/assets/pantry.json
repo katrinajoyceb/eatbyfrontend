@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Milk",
+        "type": "Dairy",
+        "expirationDate": "04/07/2020",
+        "price": "2.50",
+        "status": 2
+    },
+    {
+        "name": "Apples",
+        "type": "Fruit",
+        "expirationDate": "04/06/2020",
+        "price": "3.50",
+        "status": 1
+    },
+    {
+        "name": "Brocolli",
+        "type": "Vegetable",
+        "expirationDate": "04/10/2020",
+        "price": "4.50",
+        "status": 3
+    },
+    {
+        "name": "Salmon",
+        "type": "Fish",
+        "expirationDate": "05/15/2020",
+        "price": "7.50",
+        "status": 4
+    }
+]
