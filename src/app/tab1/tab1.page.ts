@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from '../dataservice.service';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Barcodes, FoodItem, TrendsItem } from '../../barcodes';
@@ -24,6 +24,9 @@ export class Tab1Page {
   details: boolean = false;
   itemDetails: FoodItem;
   pantryAmount: Number = 0;
+  public myClass: String = 'vector';
+
+  artichoke = 'src/assets/artichoke.jpg'
 
   constructor(private dataService: DataserviceService, public alertController: AlertController, private barcodeScanner: BarcodeScanner, public modalController: ModalController) {
     this.dataService.getFoodItems()
@@ -33,6 +36,8 @@ export class Tab1Page {
     });
   }
 
+  
+  
   ionViewWillEnter(){
     this.dataService.getFoodItems()
     .subscribe((data: FoodItem[]) => {
@@ -140,6 +145,7 @@ export class Tab1Page {
       };
 
       this.dataService.addFoodItem(this.addItem);
+      this.dataService.presentAlertAddItem(this.addItem, 'tabs/tab1');
       console.log('Barcode data', barcodeData.text);
       console.log(this.foundBarcode);
 
@@ -198,9 +204,10 @@ export class Tab1Page {
   }
 
   viewDetails(item: FoodItem){
-    
     this.details = true;
     this.itemDetails = item;
+    this.myClass = this.itemDetails.name;
+    console.log(this.myClass);
   }
 
   goBack(){

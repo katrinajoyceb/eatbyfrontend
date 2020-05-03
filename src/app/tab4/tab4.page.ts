@@ -56,6 +56,11 @@ export class Tab4Page implements OnInit {
     fruit: 0
   };
 
+  pie = true;
+  stats = false;
+  lost = false;
+
+
   constructor(private dataService: DataserviceService) {
     this.dataService.getGroceryItems()
     .subscribe((data: GroceryItem[]) => {
@@ -353,5 +358,7 @@ export class Tab4Page implements OnInit {
        this.dataService.addTrendsItem(trendItem);
      }
    }
+
+   
 
 }

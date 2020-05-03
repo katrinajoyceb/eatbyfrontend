@@ -123,9 +123,9 @@
         
     <ion-card>
 
-      <ion-item class="photo">
-        {{itemDetails.name}}
-      </ion-item>
+      
+        <div [ngClass]="myClass"></div>
+     
     
       <ion-item>
         <ion-label><b>Name:</b></ion-label>
@@ -157,7 +157,7 @@
       </ion-item>
     
       <ion-item *ngIf="itemDetails.pantryStatus != 3">
-        <ion-button color="secondary" shape="round" (click)="presentAlertFrozen(itemDetails)">Freeze</ion-button>
+        <ion-button color="tertiary" shape="round" (click)="presentAlertFrozen(itemDetails)">Freeze</ion-button>
       </ion-item>
 
       <ion-item *ngIf="itemDetails.pantryStatus == 3">
@@ -165,7 +165,7 @@
       </ion-item>
 
       <ion-item>
-        <ion-button color="dark" shape="round" (click)="goBack()">Go Back</ion-button>
+        <ion-button color="medium" shape="round" (click)="goBack()">Go Back</ion-button>
       </ion-item>
 
    

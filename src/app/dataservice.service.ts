@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from "rxjs/operators";
 import { FoodItem, GroceryItem, TrendsItem } from '.././barcodes';
-
+import { AlertController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -14,15 +14,23 @@ export class DataserviceService {
   itemDetail: FoodItem;
   groceryList: GroceryItem[];
 
-  grocery = "http://127.0.0.1:8000/items/";
-  pantry = "http://127.0.0.1:8000/pantry/";
-  trends = "http://127.0.0.1:8000/trends/";
-  addGrocery = "http://127.0.0.1:8000/addGrocery/";
-  addPantry = "http://127.0.0.1:8000/addPantry/";
-  updatePantry = "http://127.0.0.1:8000/updatePantry/";
-  addTrends = "http://127.0.0.1:8000/addTrends/";
+  // grocery = "http://192.168.9.8:8000/items/";
+  // pantry = "http://192.168.9.8:8000/pantry/";
+  // trends = "http://192.168.9.8:8000/trends/";
+  // addGrocery = "http://192.168.9.8:8000/addGrocery/";
+  // addPantry = "http://192.168.9.8:8000/addPantry/";
+  // updatePantry = "http://192.168.9.8:8000/updatePantry/";
+  // addTrends = "http://192.168.9.8:8000/addTrends/";
 
-  constructor(private http: HttpClient) { }
+  grocery = "http://192.168.0.8:8000/items/";
+  pantry = "http://192.168.0.8:8000/pantry/";
+  trends = "http://192.168.0.8:8000/trends/";
+  addGrocery = "http://192.168.0.8:8000/addGrocery/";
+  addPantry = "http://192.168.0.8:8000/addPantry/";
+  updatePantry = "http://192.168.0.8:8000/updatePantry/";
+  addTrends = "http://192.168.0.8:8000/addTrends/";
+
+  constructor(private http: HttpClient, public alertController: AlertController) { }
 
   getBarcodeDetails(){
     return this.http.get('assets/barcodes.json');
@@ -93,5 +101,22 @@ export class DataserviceService {
     
     this.http.post(`${this.updatePantry}${pk}`, item)
     .subscribe(res => console.log('Updated Pantry Item'));
+  }
+
+  async presentAlertAddItem(item: FoodItem, next: string) {
+    const alert = await this.alertController.create({
+      header: 'Success',
+      message: 'You have added <strong>' + item.name +'</strong> to the Pantry.',
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            location.href = next;
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 }

@@ -45,22 +45,22 @@ export class Tab2Page {
       });
   }
   
-  async presentAlertAddItem(item: FoodItem) {
-    const alert = await this.alertController.create({
-      header: 'Success',
-      message: 'You have added <strong>' + item.name +'</strong> to the Pantry.',
-      buttons: [
-        {
-          text: 'OK',
-          handler: () => {
+  // async presentAlertAddItem(item: FoodItem) {
+  //   const alert = await this.alertController.create({
+  //     header: 'Success',
+  //     message: 'You have added <strong>' + item.name +'</strong> to the Pantry.',
+  //     buttons: [
+  //       {
+  //         text: 'OK',
+  //         handler: () => {
             
-          }
-        }
-      ]
-    });
+  //         }
+  //       }
+  //     ]
+  //   });
 
-    await alert.present();
-  }
+  //   await alert.present();
+  // }
 
   getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -80,7 +80,7 @@ export class Tab2Page {
 
     this.dataService.addFoodItem(this.addItem);
     console.log(this.foodList);
-    this.presentAlertAddItem(this.addItem);
+    this.dataService.presentAlertAddItem(this.addItem, 'tabs/tab2');
     this.addItemForm.reset();
   }
 }

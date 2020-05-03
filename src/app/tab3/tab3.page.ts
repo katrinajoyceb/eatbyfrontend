@@ -26,7 +26,15 @@ export class Tab3Page {
   }
 
   ionViewWillEnter(){
-
+    this.dataService.getGroceryItems()
+    .subscribe((data: GroceryItem[]) => {
+      
+      this.groceryList = data;
+      
+      
+      console.log(this.groceryList);
+      
+    });
     
   }
 

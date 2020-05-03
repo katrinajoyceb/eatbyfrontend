@@ -19,11 +19,14 @@ ion-card{
   ion-col ion-card{
       width: 90%;
       min-height: auto;
-      padding: 10px;
+      padding: 20px;
       border-top-right-radius: 0px;
       border-bottom-left-radius: 00px;
-      p{
-          font-size: 15px;
-          font-weight: 700;
-      }
+      font-size: 25px;
+  }
+
+
+  ion-button{
+     
+      width: 30%;
   }
