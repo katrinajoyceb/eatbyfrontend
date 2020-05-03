@@ -2,16 +2,19 @@ ion-content ion-toolbar {
   --background: translucent;
 }
 
+
 ion-card{
-  height: 450px;
-  padding-top: 20px;
-  
+  width: 90vw;
+  height: auto;
+  min-height: 500px;
+  padding: 20px 0px 20px 0px;
+  margin: 0px auto;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
-
-
 ion-content{
-  --ion-background-color: rgb(255, 255, 255);
+  --ion-background-color: #C2D4AC;
 }
 
 p{
@@ -20,7 +23,7 @@ p{
 
 ion-list ion-item{
   border: 1px solid #E6E6E6;
-  padding: 20px;
+  padding: 10px;
   border-radius: 0 50px 50px 0px;
   margin: 5px auto;
 }
@@ -37,8 +40,8 @@ ion-list ion-item{
 .expired{
   width: 10px;
   height: 10px;
- margin-right: 5px;
- margin-left: 5px;
+ margin-right: 3px;
+ margin-left: 3px;
   background-color: red;
   border-radius: 50%;
   display: inline-block;
@@ -47,8 +50,8 @@ ion-list ion-item{
 .good{
   width: 10px;
   height: 10px;
-  margin-right: 5px;
- margin-left: 5px;
+  margin-right: 3px;
+ margin-left: 3px;
   background-color: #598C1A;
   border-radius: 50%;
   display: inline-block;
@@ -57,8 +60,8 @@ ion-list ion-item{
 .almost{
   width: 10px;
   height: 10px;
-  margin-right: 5px;
- margin-left: 5px;
+  margin-right: 3px;
+ margin-left: 3px;
   background-color: #582B01;
   border-radius: 50%;
   display: inline-block;
@@ -67,15 +70,52 @@ ion-list ion-item{
 .frozen{
   width: 10px;
   height: 10px;
-  margin-right: 5px;
- margin-left: 5px;
+  margin-right: 3px;
+ margin-left: 3px;
   background-color: #8B8A6E;
   border-radius: 50%;
   display: inline-block;
 }
 
-
 ion-fab-list ion-fab-button{
-  width: 100px;
-  border-radius: 0px !important;
+  width: 70px;
+  height: 70px;
+  margin-top: -50px;
+ 
+}
+
+ion-item ion-fab-button{
+  width: 50px;
+  height: 50px;
+  margin-top: 0px;
+  z-index: 10000000;
+}
+
+
+.info{
+  width: 250px;
+  height: 350px;
+  position: absolute;
+  background-color:  rgb(255, 255, 255);
+  border: 1px solid grey;
+  border-radius: 25px;
+  padding: 10px;
+  left: 50px;
+  top: 10px;
+  z-index: 10000000000;
+  box-shadow: black 0px 0px 10px;
+}
+
+.itemDetails{
+  
+  width: 100%;
+
+
+  ion-item {
+    height: 50px;
+  }
+
+  ion-button{
+    height: 40px;
+  }
 }

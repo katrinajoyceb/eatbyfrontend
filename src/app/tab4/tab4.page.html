@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title size="large">
+      EatBy
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-card>
+    <ion-title>Trends</ion-title>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-card-subtitle align="center">For April 2020</ion-card-subtitle>
+        <canvas #barChart></canvas>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-card>
+          <b>Amount Lost in April: </b>${{this.moneyLostApril}}<br />
+          <b>Current Money Lost: </b>${{this.moneyLostNow}}
+        </ion-card>
+        
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-card-subtitle align="center">Categories</ion-card-subtitle>
+        <canvas #eatenChart></canvas>
+        <canvas #tossedChart></canvas>
+        <canvas #frozenChart></canvas>
+      </ion-col>
+    </ion-row>
+    
+
+
+   
+   
+   
+
+   
+
+  </ion-card>
+
+
+</ion-content>

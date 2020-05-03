@@ -1,0 +1,29 @@
+ion-card{
+    width: 90vw;
+    min-height: 500px;
+    padding: 20px 0px 20px 0px;
+    margin: 10px auto;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  
+  ion-content{
+    --ion-background-color: #C2D4AC;
+  }
+
+  ion-col ion-item{
+      font-size: 10px;
+  }
+
+
+  ion-col ion-card{
+      width: 90%;
+      min-height: auto;
+      padding: 10px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 00px;
+      p{
+          font-size: 15px;
+          font-weight: 700;
+      }
+  }

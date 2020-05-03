@@ -12,6 +12,24 @@
       <ion-title size="large">Grocery List</ion-title>
     </ion-toolbar>
   </ion-header>
-Grocery List!
+  
+  <ion-grid>
+    <ion-row>
+      
+      <ion-col size="12" >
+       <ion-card>
+          <ion-title>Grocery List</ion-title>
+
+          <ion-list class="list">
+          <div *ngFor="let item of groceryList">
+            <ion-item >{{item.name}}</ion-item>
+          </div>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ 
  
 </ion-content>

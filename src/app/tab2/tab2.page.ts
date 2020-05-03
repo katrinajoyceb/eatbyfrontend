@@ -3,7 +3,7 @@ import { DataserviceService } from '../dataservice.service';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Barcodes, FoodItem } from '../../barcodes';
-
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -11,7 +11,6 @@ import { Barcodes, FoodItem } from '../../barcodes';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
 
   menu = true;
   manual = false;
@@ -22,28 +21,16 @@ export class Tab2Page {
   addItem: FoodItem;
   stuff: string;
   foodList: FoodItem[];
-  
-
   private addItemForm : FormGroup;
 
-
-
   constructor(private formBuilder: FormBuilder, private barcodeScanner: BarcodeScanner,
-    private dataService: DataserviceService) {
+    private dataService: DataserviceService, public alertController: AlertController) {
     this.addItemForm = this.formBuilder.group({
       name: ['', Validators.required],
       type: [''],
       expirationDate: [''],
       price: [''],
     });
-
-    
-
-    // this.dataService.getBarcodeDetails()
-    //   .subscribe((response)=> {
-    //     this.items = response
-    //     console.log(this.items);
-    // });
   }
 
   ionViewWillEnter(){
@@ -51,79 +38,49 @@ export class Tab2Page {
     this.addItemForm.reset();
     this.foodList = this.dataService.foodItems;
     console.log(this.foodList);
-
+    
     this.dataService.getBarcodeDetails()
       .subscribe((data: Barcodes[]) => {
         this.barcodeItems = data;
       });
-    
+  }
+  
+  async presentAlertAddItem(item: FoodItem) {
+    const alert = await this.alertController.create({
+      header: 'Success',
+      message: 'You have added <strong>' + item.name +'</strong> to the Pantry.',
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
-  onChange(mode){
-
-    this.dataService.getBarcodeDetails();
-
-    this.menu = false;
-    if(mode == 1){
-      this.scan = true;
-      console.log("scan")
-    }
-    else if(mode == 2){
-      this.manual = true;
-      console.log("manual")
-    }
-    
-
-    console.log(mode);
+  getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
   }
-
-  onCancel(){
-    this.menu= true;
-    this.manual = false;
-    this.scan = false;
-  }
-
 
   addToPantry(){
     console.log(this.addItemForm.value);
     this.addItem = {
+      pantryId: this.getRandomInt(100),
       name: this.addItemForm.get('name').value,
       type: this.addItemForm.get('type').value,
       expirationDate: this.addItemForm.get('expirationDate').value,
       price: this.addItemForm.get('price').value,
-      status: 3
+      expiredStatus: 3,
+      pantryStatus: 0
     };
 
-    this.foodList.push(this.addItem);
+    this.dataService.addFoodItem(this.addItem);
     console.log(this.foodList);
+    this.presentAlertAddItem(this.addItem);
     this.addItemForm.reset();
-    
   }
-
-  scanBarcode(){
-    this.barcodeScanner.scan().then(barcodeData => {
-      this.data = barcodeData.text; //barcode
-      this.foundBarcode = this.barcodeItems.find(s => s.code === this.data).items[0]; //item
-      this.addItem = {
-        name: this.foundBarcode.name,
-        type: this.foundBarcode.type,
-        expirationDate: this.foundBarcode.expirationDate,
-        price: this.foundBarcode.price,
-        status: 3
-      };
-
-      this.foodList.push(this.addItem);
-      console.log('Barcode data', barcodeData.text);
-      console.log(this.foundBarcode);
-    
-     }).catch(err => {
-         console.log('Error', err);
-     });
-   
-
-     
-  }
-
- 
-
 }

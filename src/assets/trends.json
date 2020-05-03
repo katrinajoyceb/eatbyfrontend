@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Soy Milk",
+        "type": "Dairy",
+        "price": "2.50",
+        "expiredStatus": 2,
+        "pantryStatus": 1,
+        "month": "April"
+    },
+    {
+        "name": "Apples",
+        "type": "Fruit",
+        "price": "3.50",
+        "expiredStatus": 1,
+        "pantryStatus": 2,
+        "month": "April"
+    },
+    {
+        "name": "Brocolli",
+        "type": "Vegetable",
+        "price": "4.50",
+        "expiredStatus": 3,
+        "pantryStatus": 1,
+        "month": "April"
+    },
+    {
+        "name": "Salmon",
+        "type": "Seafood",
+        "price": "7.50",
+        "expiredStatus": 4,
+        "pantryStatus": 3,
+        "month": "April"
+    },
+    {
+        "name": "Bananas",
+        "type": "Fruit",
+        "price": "3.50",
+        "expiredStatus": 3,
+        "pantryStatus": 1,
+        "month": "April"
+    },
+    {
+        "name": "Blueberries",
+        "type": "Fruit",
+        "price": "3.50",
+        "expiredStatus": 4,
+        "pantryStatus": 2,
+        "month": "April"
+    },
+    {
+        "name": "Oysters",
+        "type": "Seafood",
+        "price": "10.50",
+        "expiredStatus": 1,
+        "pantryStatus": 1,
+        "month": "April"
+    },
+    {
+        "name": "Tomatoes",
+        "type": "Vegetable",
+        "price": "3.50",
+        "expiredStatus": 3,
+        "pantryStatus": 1,
+        "month": "April"
+    },
+    {
+        "name": "Ribs",
+        "type": "Meat",
+        "price": "17.50",
+        "expiredStatus": 2,
+        "pantryStatus": 1,
+        "month": "April"
+    },
+    {
+        "name": "Green Onions",
+        "type": "Vegetables",
+        "price": "1.50",
+        "expiredStatus": 1,
+        "pantryStatus": 2,
+        "month": "April"
+    },
+    {
+        "name": "Almond Milk",
+        "type": "Dairy",
+        "price": "3.50",
+        "expiredStatus": 3,
+        "pantryStatus": 1,
+        "month": "March"
+    },
+    {
+        "name": "Oranges",
+        "type": "Fruit",
+        "price": "1.50",
+        "expiredStatus": 3,
+        "pantryStatus": 2,
+        "month": "March"
+    },
+    {
+        "name": "Bell Peppers",
+        "type": "Vegetable",
+        "price": "4.50",
+        "expiredStatus": 1,
+        "pantryStatus": 1,
+        "month": "March"
+    },
+    {
+        "name": "Tilapia",
+        "type": "Seafood",
+        "price": "7.50",
+        "expiredStatus": 3,
+        "pantryStatus": 1,
+        "month": "March"
+    },
+    {
+        "name": "Kiwi",
+        "type": "Fruit",
+        "price": "3.50",
+        "expiredStatus": 2,
+        "pantryStatus": 1,
+        "month": "March"
+    },
+    {
+        "name": "Baguette",
+        "type": "Bakery",
+        "price": "2.50",
+        "expiredStatus": 2,
+        "pantryStatus": 1,
+        "month": "March"
+    },
+    {
+        "name": "Sourdough",
+        "type": "Bakery",
+        "price": "5.50",
+        "expiredStatus": 1,
+        "pantryStatus": 1,
+        "month": "March"
+    },
+    {
+        "name": "Garlic",
+        "type": "Vegetable",
+        "price": "3.50",
+        "expiredStatus": 3,
+        "pantryStatus": 1,
+        "month": "March"
+    },
+    {
+        "name": "Steak",
+        "type": "Meat",
+        "price": "20.50",
+        "expiredStatus": 3,
+        "pantryStatus": 1,
+        "month": "March"
+    },
+    {
+        "name": "Onions",
+        "type": "Vegetables",
+        "price": "3.50",
+        "expiredStatus": 1,
+        "pantryStatus": 1,
+        "month": "March"
+    }
+]

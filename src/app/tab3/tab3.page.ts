@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { DataserviceService } from '../dataservice.service';
+import { Barcodes, FoodItem, GroceryItem } from '../../barcodes';
+
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +10,25 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  groceryList: GroceryItem[];
+
+  constructor(private dataService: DataserviceService) {
+    this.dataService.getGroceryItems()
+    .subscribe((data: GroceryItem[]) => {
+      
+      this.groceryList = data;
+      
+      
+      console.log(this.groceryList);
+      
+    });
+    
+  }
+
+  ionViewWillEnter(){
+
+    
+  }
+
 
 }
