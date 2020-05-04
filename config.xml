@@ -102,4 +102,5 @@
     <plugin name="phonegap-plugin-barcodescanner" spec="^8.1.0" />
     <engine name="ios" spec="4.5.5" />
     <engine name="android" spec="7.1.4" />
+    <plugin name="cordova-plugin-streaming-media" spec="^2.2.0" />
 </widget>

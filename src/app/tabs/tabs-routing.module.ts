@@ -48,6 +48,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'livefeed',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../livefeed/livefeed.module').then(m => m.LivefeedPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

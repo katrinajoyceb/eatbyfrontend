@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'start',
     loadChildren: () => import('./getstarted/getstarted.module').then( m => m.GetstartedPageModule)
+  },
+  {
+    path: 'livefeed',
+    loadChildren: () => import('./livefeed/livefeed.module').then( m => m.LivefeedPageModule)
   }
 ];
 @NgModule({
